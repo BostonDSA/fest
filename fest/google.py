@@ -142,7 +142,7 @@ class GoogleSyncFuture:
                 }
 
             elif digest != google_events[facebook_id]['digest']:
-                self.calendar.logger.debug('Event digest mismatch', extra=event)
+                self.calendar.logger.info('Event digest mismatch', extra=event)
 
                 self.requests['PUT'][facebook_id] = {
                     'calendarId': self.calendar.calendar_id,
